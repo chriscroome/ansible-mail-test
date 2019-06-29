@@ -14,7 +14,7 @@ It will then attempt to sent 2 emails to you:
 1. A US-ASCII email with the header `Reply-To=test@example.org`
 3. A UTF-8 email with the header `Reply-To=test@example.org`
 
-The first email will work, the second email and third emails will fail with:
+The first email will work, the second email will fail with:
 
 ```
 TASK [mail : UTF-8 Email sent to you@example.org] ******************************************************************************************************
