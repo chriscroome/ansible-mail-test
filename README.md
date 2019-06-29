@@ -9,7 +9,7 @@ Clone this repo and then run the bash script with the first argument being a rem
 Email address to send to: you@example.org
 ```
 
-It will then prompt you for an email address and it will then attempt to sent 2 emails to you:
+It will then attempt to sent 2 emails to you:
 
 1. A US-ASCII email with the header `Reply-To=test@example.org`
 3. A UTF-8 email with the header `Reply-To=test@example.org`
