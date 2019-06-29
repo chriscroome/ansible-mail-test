@@ -1,6 +1,6 @@
 # Ansible Mail Test
 
-This repo demonstrates that the `Reply-To` header can only be set if the character set of the email is `US-ASCII` when using the [Ansible Mail module](https://docs.ansible.com/ansible/latest/modules/mail_module.html).
+This repo demonstrates that the `Reply-To` header can only be set if the character set of the email is US-ASCII when using the [Ansible Mail module](https://docs.ansible.com/ansible/latest/modules/mail_module.html).
 
 Clone this repo and then run the bash script with the first argument being a remote server with Exim set to accept email from local users, you will be prompted for an email addess to send the mail to:
 
