@@ -1,0 +1,12 @@
+---
+- name: Email header test
+  hosts: "{{ hostname }}"
+  become: true
+
+  vars_prompt:
+
+    - name: "mail_to"
+      prompt: "Email address to send to"
+
+  roles:
+    - mail

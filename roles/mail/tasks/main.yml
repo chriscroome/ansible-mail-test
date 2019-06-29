@@ -1,0 +1,46 @@
+---
+- name: "US-ASCII Email sent to {{ mail_to }}"
+  mail:
+    from: "root <root@{{ inventory_hostname }}>"
+    to: "{{ mail_to }}"
+    subject: "Test email from {{ inventory_hostname }}"
+    headers:
+      - X-Auto-Response-Suppress=All
+      - Reply-To=test@example.org
+    charset: us-ascii
+    body: "This is a test"
+    host: localhost
+    port: 25
+    secure: never
+  ignore_errors: true
+
+- name: "US-ASCII Email sent to {{ mail_to }}"
+  mail:
+    from: "root <root@{{ inventory_hostname }}>"
+    to: "{{ mail_to }}"
+    subject: "Test email from {{ inventory_hostname }}"
+    headers:
+      - X-Auto-Response-Suppress = All
+      - Reply-To = "Test <test@example.org>"
+    charset: us-ascii
+    body: "This is a test"
+    host: localhost
+    port: 25
+    secure: never
+  ignore_errors: true
+
+- name: "UTF-8 Email sent to {{ mail_to }}"
+  mail:
+    from: "root <root@{{ inventory_hostname }}>"
+    to: "{{ mail_to }}"
+    subject: "Test email from {{ inventory_hostname }}"
+    headers:
+      - X-Auto-Response-Suppress=All
+      - Reply-To=test@example.org
+    charset: utf-8
+    body: "This is a test"
+    host: localhost
+    port: 25
+    secure: never
+  ignore_errors: true
+
