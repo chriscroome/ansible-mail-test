@@ -24,8 +24,16 @@ fatal: [server.example.org]: FAILED! => {"changed": false, "msg": "Failed to sen
 
 ```
 
-The Exim logs on the server this failures:
+The Exim logs on the server documents this failures:
 
 ```
 2019-06-29 11:03:20.784 [10043] 1hhB8a-0002bz-OP H=localhost (server.example.org) [127.0.0.1]:50190 I=[127.0.0.1]:25 F=<root@server.example.org> rejected after DATA: header syntax (unqualified address not permitted: failing address in "Reply-To:" header is: =?utf-8?q?test=40example=2Eorg?=): unqualified address not permitted: failing address in "Reply-To:" header is: =?utf-8?q?test=40example=2Eorg?=
 ```
+
+The reason:
+
+```
+unqualified address not permitted:
+  failing address in "Reply-To:" header is:
+    =?utf-8?q?test=40example=2Eorg?=
+```  
